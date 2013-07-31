@@ -218,6 +218,7 @@ KISSY.add('event/dom/base/observable', function (S, DOM, special, Utils, DOMEven
                 // Trigger an inline bound script
                 if (cur[ ontype ] && cur[ ontype ].call(cur) === false) {
                     event.preventDefault();
+                    ret = false;
                 }
 
                 cur = eventPath[++eventPathIndex];
